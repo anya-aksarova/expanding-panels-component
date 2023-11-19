@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FONT AWESOME-->
+    <link rel-="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="style.css">
+    <title>Expanding Cards</title>
+</head>
+
+<!--Project with expanding panels where each panel
+gets a background and a heading which will be aligned
+with flexbox. Javascript will change the class of the
+panel to "active" once it is clicked (event listeners
+and the panel expands with CSS transition as well as 
+the heading is only visible when panel is expanded-->
+<body>
+    <!--MAIN CONTAINER PANEL-->
+    <div class="container">
+    <!--active class will specify which card shoukd expand-->
+        <!--PANEL 1-->
+        <div class="panel active" style="background-image: url('./images/skyline.jfif')">
+            <h3>Nissan Skyline</h3>
+        </div>
+        <!--PANEL 2-->
+        <div class="panel" style="background-image: url('./images/supra.jpg')">
+            <h3>Toyota Supra</h3>
+        </div>
+        <!--PANEL 3-->
+        <div class="panel" style="background-image: url('./images/s200.jpg')">
+            <h3>Honda S200</h3>
+        </div>
+        <!--PANEL 4-->
+        <div class="panel" style="background-image: url('./images/mazda.jpg')">
+            <h3>Mazda Fortune</h3>
+        </div>
+        <!--PANEL 5-->
+        <div class="panel" style="background-image: url('./images/ford.jpg')">
+            <h3>Ford Mustang</h3>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>

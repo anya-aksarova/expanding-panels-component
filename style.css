@@ -1,0 +1,82 @@
+/*ROBOTO FONT 500 700*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*CORE STYLES*/
+* {
+   box-sizing: border-box; 
+}
+
+body {
+    /*in order to center all projects*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /*needed for justify-content to work*/
+    overflow: hidden; /*get rid of all default scrollbars*/
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+}
+
+/*MAIN CONTAINER*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+}
+
+/*PANELS*/
+.panel {
+    flex: 0.5; /*flex-grow*/
+    /*needed to position h3s absolutely*/
+    position: relative; 
+    height: 80vh;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.7s ease-in;
+}
+
+.panel h3 {
+    /*in an inactive state the h3s are invisible*/
+    opacity: 0;
+    /*we need it at bottom left corner*/
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    font-size: 24px;
+}
+
+/*if panel div has an active class*/
+/*default: first fiv has the active class*/
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    /*set h3 to visible in an active state*/
+    opacity: 1;
+    /*removes the awckward falling of h3's in active states*/
+    transition: opacity 0.3s ease-in 0.4s; /*target opacity with 0.4s delay*/
+}
+
+/*for small screens 3 instead of 5 panels
+must be shown*/
+@media(max-width: 660px) {
+    .container {
+        width: 90vw;
+    }
+    /*grab 4th and 5th panel*/
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        /*remove*/
+        display: none;
+    }
+}
